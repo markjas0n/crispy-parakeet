@@ -2,13 +2,13 @@
 
 /* General body styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f4f9;
-  color: #4a4e69;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff; /* Plain white background for a clean look */
+  color: #333; /* Darker text color for readability */
   margin: 0;
-  padding-right: 20rem;
+  padding: 0;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -21,22 +21,52 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  max-width: 180%; /* Increased width */
-  width: 150%;
-  border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #f2e9e4;
-  margin: 0 auto; /* Centering the .app container */
+  max-width: 90%; /* Limit the overall app width */
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styling for the enter screen */
+.enter-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f7f4f9; /* Light background to differentiate the intro */
+  transition: opacity 0.3s ease;
+}
+
+/* Styling for the Enter button */
+.enter-button {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.enter-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 86, 179, 0.5);
 }
 
 /* Header styling */
 .header {
-  background-color: #c9ada7;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
-  color: #4a4e69;
+  color: #333;
   width: 100%;
-  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #ddd; /* Subtle border for separation */
 }
 
 /* Navigation styling */
@@ -53,13 +83,13 @@ body {
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #007bff;
 }
 
-/* Active navigation item styling */
 .navigation li.active {
-  background-color: #9a8c98;
-  color: #f2e9e4;
+  background-color: #007bff;
+  color: #ffffff;
 }
 
 /* Styling for main sections */
@@ -68,19 +98,69 @@ body {
 .contact,
 .resume {
   padding: 40px 20px;
-  width: 90%; /* Increased width */
+  width: 80%;
   margin-top: 20px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Recenter the sections */
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadows for depth */
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+/* Styling for main sections */
+.about {
+  padding: 40px 20px;
+  width: 80%;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Specific styles for the portfolio section */
-.portfolio {
-  width: 100%; /* Increased width of the portfolio section specifically */
-  margin: 0 auto; /* Recenter the portfolio section */
+/* Styling for the content within the About section */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
 }
+
+/* Profile picture styling */
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* About text styling */
+.about-text {
+  flex: 1;
+  color: #333;
+  padding-left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    padding-left: 0;
+  }
+}
+
 
 /* Avatar image styling */
 .avatar {
@@ -88,6 +168,7 @@ body {
   border-radius: 50%;
   display: block;
   margin: 0 auto 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image */
 }
 
 /* Project section styling */
@@ -101,36 +182,41 @@ body {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Contact form styling */
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-/* Centering form within the contact section */
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 600px; /* Set max width to control form size */
-  width: 100%; /* Full width within the max-width constraints */
-  margin: 0 auto; /* Center form within the contact section */
+  gap: 15px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* Input and textarea styling for the contact form */
 .contact input,
 .contact textarea {
-  padding: 10px;
-  border: 2px solid #c9ada7; /* Border color */
+  padding: 12px;
+  border: 1px solid #ddd;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
-  background-color: #ffffff; /* Changed background color to white */
-  color: #4a4e69; /* Text color inside the form fields */
+  background-color: #ffffff;
+  color: #333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
 
 /* Error message styling */
@@ -141,23 +227,22 @@ body {
 
 /* Footer styling */
 .footer {
-  background-color: #6b705c;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
-  color: #f2e9e4;
+  color: #333;
   width: 100%;
-  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #ddd;
 }
 
 /* Footer link styling */
 .footer a {
-  color: #f2e9e4;
+  color: #007bff;
   margin: 0 10px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Footer link hover effect */
 .footer a:hover {
-  color: #ffddd2;
+  color: #0056b3;
 }
