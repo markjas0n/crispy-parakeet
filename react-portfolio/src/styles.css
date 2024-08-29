@@ -1,0 +1,163 @@
+/* src/styles.css */
+
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f4f9;
+  color: #4a4e69;
+  margin: 0;
+  padding-right: 20rem;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* App container styling */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 180%; /* Increased width */
+  width: 150%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f2e9e4;
+  margin: 0 auto; /* Centering the .app container */
+}
+
+/* Header styling */
+.header {
+  background-color: #c9ada7;
+  padding: 20px;
+  text-align: center;
+  color: #4a4e69;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Navigation styling */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+/* Navigation item styling */
+.navigation li {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Active navigation item styling */
+.navigation li.active {
+  background-color: #9a8c98;
+  color: #f2e9e4;
+}
+
+/* Styling for main sections */
+.about,
+.portfolio,
+.contact,
+.resume {
+  padding: 40px 20px;
+  width: 90%; /* Increased width */
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Recenter the sections */
+}
+
+/* Specific styles for the portfolio section */
+.portfolio {
+  width: 100%; /* Increased width of the portfolio section specifically */
+  margin: 0 auto; /* Recenter the portfolio section */
+}
+
+/* Avatar image styling */
+.avatar {
+  max-width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Project section styling */
+.project {
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Project image styling */
+.project img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Contact form styling */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Centering form within the contact section */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px; /* Set max width to control form size */
+  width: 100%; /* Full width within the max-width constraints */
+  margin: 0 auto; /* Center form within the contact section */
+}
+
+/* Input and textarea styling for the contact form */
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 2px solid #c9ada7; /* Border color */
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Changed background color to white */
+  color: #4a4e69; /* Text color inside the form fields */
+}
+
+/* Error message styling */
+.error {
+  color: #d9534f;
+  font-size: 0.85rem;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #6b705c;
+  padding: 20px;
+  text-align: center;
+  color: #f2e9e4;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Footer link styling */
+.footer a {
+  color: #f2e9e4;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Footer link hover effect */
+.footer a:hover {
+  color: #ffddd2;
+}
