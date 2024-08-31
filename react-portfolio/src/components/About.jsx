@@ -1,4 +1,3 @@
-// src/components/About.jsx
 import React from 'react';
 
 // About section displaying a bio and an image of the developer
@@ -6,7 +5,8 @@ const About = () => {
   return (
     <section className="about uniform-section">
       <div className="about-content">
-        <img src="/Users/markjason/Bootcamp/Challenges/react-port/react-portfolio/assets/images/IMG_7602 2.jpg" alt="Developer" className="profile-picture" />
+      <img src="/assets/images/HQ.png" alt="Developer" className="profile-picture" />
+
         <div className="about-text">
           <h2>About Me</h2>
           <p>

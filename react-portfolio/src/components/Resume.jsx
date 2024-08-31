@@ -5,19 +5,23 @@ import React from 'react';
 const Resume = () => {
   return (
     <section className="resume">
-      {/* Link to download the resume */}
-      <a href="path-to-your-resume.pdf" download>
-        Download My Resume
-      </a>
-      <h3>Proficiencies</h3>
-      {/* List of proficiencies */}
-      <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>CSS</li>
-        {/* Add more proficiencies as needed */}
-      </ul>
+      <div className="resume-box">
+        {/* Box for Download My Resume */}
+        <a href="path-to-your-resume.pdf" download className="resume-link">
+          Download My Resume
+        </a>
+      </div>
+      <div className="proficiencies-box">
+        {/* Box for Proficiencies */}
+        <h3 className="proficiencies-header">Proficiencies</h3>
+        <ul className="proficiencies-list">
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>CSS</li>
+          {/* Add more proficiencies as needed */}
+        </ul>
+      </div>
     </section>
   );
 };
