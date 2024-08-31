@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <footer className="footer">
       {/* Link to GitHub profile */}
-      <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/markjas0n" target="_blank" rel="noopener noreferrer">
         GitHub
       </a>
       {/* Link to LinkedIn profile */}
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
         LinkedIn
       </a>
       {/* Link to Stack Overflow profile */}
-      <a href="https://stackoverflow.com/users/yourprofile" target="_blank" rel="noopener noreferrer">
+      <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">
         Stack Overflow
       </a>
     </footer>
