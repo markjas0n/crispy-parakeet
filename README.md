@@ -15,6 +15,7 @@ This is a personal portfolio website built using React. The portfolio showcases 
 ## Demo
 
 Check out the live demo of the portfolio here: [Live Demo](https://markjas0n-react.netlify.app)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/594527b3-3ae6-42e9-aec4-39f441dc07c2/deploy-status)](https://app.netlify.com/sites/markjas0n-react/deploys)
 ## Features
 
@@ -35,11 +36,8 @@ To run this project locally, follow these steps:
 2. **Navigate to the project directory:**
     ```bash
     npm install
-
 ## Usage 
  After installing the dependencies, you can run the project locally using:
-
-    ```bash
     npm run dev
 
 This command will start the development server, and the site will be accessible at http://localhost:5173/.
