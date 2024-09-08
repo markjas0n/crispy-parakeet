@@ -71,6 +71,7 @@ body {
 }
 
 /* Navigation styling */
+/* Navigation item styling */
 .navigation ul {
   list-style: none;
   display: flex;
@@ -79,25 +80,86 @@ body {
   padding: 0;
 }
 
-/* Navigation item styling */
 .navigation li {
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   color: #EFF6E0;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigation li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.navigation li:hover::before {
+  left: 0;
+}
+
+.navigation li:hover {
+  color: #EFF6E0;
+  background-color: #124559;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.2);
 }
 
 .navigation li.active {
   background-color: #124559;
   color: #EFF6E0;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.2);
 }
 
 /* Styling for main sections */
-.about,
-.portfolio,
+.portfolio {
+ 
+ border-color: #01161E;
+ width: 90%;
+ max-width: 800px;
+ text-align: center;
+ border-radius: 12px;
+ box-shadow: 0px 4px 8px rgba(0, 0, 1.0, 0.5);
+ margin: 0 auto;
+ background-color: #01161E;
+ transition: all 0.3s ease-in-out;
+ display: flex column;
+ flex-direction: row;
+
+  }
+
+
+
+
+
+
+
+
+.about {
+  padding: 0px 20px;
+  border-color: #01161E;
+  width: 100%;
+  max-width: 90%; /* Consistent max-width */
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 1.0, 0.05); /* Soft shadows for depth */
+  margin: 40px auto;
+  background-color: #01161E;
+  transition: all 0.3s ease-in-out;
+  display: flow;
+  justify-content: center; /* Center the content horizontally */
+}
+
+
 .contact {
-  padding: 40px 20px;
+  padding: 0px 20px;
   border-color: #01161E;
   width: 100%;
   max-width: 90%; /* Consistent max-width */
@@ -111,21 +173,21 @@ body {
   justify-content: center; /* Center the content horizontally */
 }
 .resume { 
-text-align: center; 
-margin-top: 20px;
-margin-bottom: 30px;
-padding-left: 10px;
-padding-right: 20px
-
+  text-align: center; 
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
+
 /* Additional styling for the About section */
 .about-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  width: 70%;
+  justify-content: flex-start;
+  gap: 0px;
+  width: 90%;
   max-width: 750px; /* Maximum width for .about-content */
   margin: 0 auto; /* Center the .about-content container */
 }
@@ -191,6 +253,20 @@ padding-right: 20px
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* Scrollable container styling */
+.portfolio-container {
+  width: 100%;
+  max-width: 90%; /* Set the max height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #124559; /* Optional: border for the scrollable container */
+  padding: 0px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.2); /* Optional: shadow effect */
+  margin: 40px auto;
+}
+
+
+
 /* Contact form styling */
 .contact form {
   display: flex;
@@ -198,14 +274,14 @@ padding-right: 20px
   gap: 15px;
   max-width: 600px; /* Ensure the form takes up appropriate width */
   width: 100%;
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 /* Input and textarea styling for the contact form */
 .contact input,
 .contact textarea {
-  padding: 12px;
-  border: 1px solid #124559;
+  padding: 5px;
+  border: 0.5px solid #124559;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
@@ -238,14 +314,69 @@ padding-right: 20px
   border-width: 0.5px;
 }
 
+/* Styling for the Resumé link */
+.resume a {
+  color: #EFF6E0; /* Initial color */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #EFF6E0;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+/* Styling for the Resumé link */
+.resume-link {
+  color: #AEC3B0; /* Initial color */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #EFF6E0;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  font-size: 12px; 
+}
+
+.resume-link:hover {
+  color: #01161E; /* Text color on hover */
+  background-color: #AEC3B0; /* Background color on hover */
+  transform: translateY(2); /* Slight upward movement on hover */
+}
+
+.resume a:hover {
+  color: #01161E; /* Text color on hover */
+  background-color: #EFF6E0; /* Background color on hover */
+  transform: translateY(-3px); /* Slight upward movement on hover */
+}
+
 /* Footer link styling */
 .footer a {
   color: #EFF6E0;
   margin: 0 10px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.footer a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #AEC3B0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer a:hover::before {
+  width: 100%;
+  left: 0;
 }
 
 .footer a:hover {
   color: #AEC3B0;
+  transform: translateY(-3px);
 }

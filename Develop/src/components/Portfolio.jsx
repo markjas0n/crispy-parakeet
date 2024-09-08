@@ -12,9 +12,11 @@ const projects = [
 const Portfolio = () => {
   return (
     <section className="portfolio">
-      {projects.map((project, index) => (
-        <Project key={index} project={project} />
-      ))}
+      <div className="portfolio-container">
+        {projects.map((project, index) => (
+          <Project key={index} project={project} />
+        ))}
+      </div>
     </section>
   );
 };

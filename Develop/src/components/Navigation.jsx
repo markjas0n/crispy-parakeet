@@ -4,19 +4,24 @@ import React from 'react';
 // Navigation component for switching between different sections of the portfolio
 const Navigation = ({ setCurrentSection, currentSection }) => {
   // List of sections to display in the navigation menu
-  const sections = ['⌲ About', '⌲ Portfolio', '⌲ Contact', '⌲ Resume'];
+  const sections = [
+    { name: 'About', displayName: '☞ About' },
+    { name: 'Portfolio', displayName: '☞ Portfolio' },
+    { name: 'Contact', displayName: '☞ Contact' },
+    { name: 'Resume', displayName: '☞ Resumé' }
+  ];
 
   return (
     <nav className="navigation">
       <ul>
         {sections.map((section) => (
           <li
-            key={section}
-            className={currentSection === section ? 'active' : ''}
+            key={section.name}
+            className={currentSection === section.name ? 'active' : ''}
             // Updates the current section when a navigation item is clicked
-            onClick={() => setCurrentSection(section)}
+            onClick={() => setCurrentSection(section.name)}
           >
-            {section}
+            {section.displayName}
           </li>
         ))}
       </ul>
