@@ -1,4 +1,3 @@
-// src/components/Project.jsx
 import React from 'react';
 
 // Project component displaying the details of each individual project

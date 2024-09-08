@@ -71,7 +71,6 @@ body {
 }
 
 /* Navigation styling */
-/* Navigation item styling */
 .navigation ul {
   list-style: none;
   display: flex;
@@ -80,6 +79,7 @@ body {
   padding: 0;
 }
 
+/* Transition effect for the navigation items */
 .navigation li {
   cursor: pointer;
   padding: 10px 15px;
@@ -118,31 +118,22 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.2);
 }
 
+/* Transition effect for the page content */
+.main-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.main-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Styling for main sections */
-.portfolio {
- 
- border-color: #01161E;
- width: 90%;
- max-width: 800px;
- text-align: center;
- border-radius: 12px;
- box-shadow: 0px 4px 8px rgba(0, 0, 1.0, 0.5);
- margin: 0 auto;
- background-color: #01161E;
- transition: all 0.3s ease-in-out;
- display: flex column;
- flex-direction: row;
-
-  }
-
-
-
-
-
-
-
-
-.about {
+.about,
+.portfolio,
+.contact {
   padding: 0px 20px;
   border-color: #01161E;
   width: 100%;
@@ -157,21 +148,6 @@ body {
   justify-content: center; /* Center the content horizontally */
 }
 
-
-.contact {
-  padding: 0px 20px;
-  border-color: #01161E;
-  width: 100%;
-  max-width: 90%; /* Consistent max-width */
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 1.0, 0.05); /* Soft shadows for depth */
-  margin: 0 auto;
-  background-color: #01161E;
-  transition: all 0.3s ease-in-out;
-  display: flow;
-  justify-content: center; /* Center the content horizontally */
-}
 .resume { 
   text-align: center; 
   margin-top: 30px;
@@ -239,11 +215,11 @@ body {
 .project {
   margin: 20px 0;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Project image styling */
 .project img {
-  max-width: 100%; /* Adjust to fit within the container */
+  max-width: 100%; /* Ensure images fit within the container */
   border-radius: 8px;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
@@ -251,21 +227,31 @@ body {
 
 .project img:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.4); /* Shadow effect on hover */
+}
+
+.project a {
+  color: #EFF6E0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: #AEC3B0; /* Change text color on hover */
 }
 
 /* Scrollable container styling */
 .portfolio-container {
-  width: 100%;
-  max-width: 90%; /* Set the max height for the scrollable area */
+  max-height: 400px; /* Adjust the height as needed */
   overflow-y: auto; /* Enable vertical scrolling */
-  border: 1px solid #124559; /* Optional: border for the scrollable container */
-  padding: 0px 20px;
+  border: 2px solid #124559; /* Optional: border for the scrollable container */
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.2); /* Optional: shadow effect */
-  margin: 40px auto;
+  background-color: #01161E; /* Background color to match the overall theme */
+  margin: 0 auto; /* Center the scrollable container */
 }
-
-
 
 /* Contact form styling */
 .contact form {

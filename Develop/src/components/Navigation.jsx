@@ -1,4 +1,3 @@
-// src/components/Navigation.jsx
 import React from 'react';
 
 // Navigation component for switching between different sections of the portfolio

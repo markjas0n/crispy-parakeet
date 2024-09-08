@@ -1,6 +1,5 @@
-// src/components/Header.jsx
 import React from 'react';
-import Navigation from './Navigation';
+import Navigation from '../Navigation';
 
 // Header component containing the site title and navigation
 const Header = ({ setCurrentSection, currentSection }) => {

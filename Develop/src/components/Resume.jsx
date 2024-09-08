@@ -1,4 +1,3 @@
-// src/components/Resume.jsx
 import React, { useState } from 'react';
 
 // Resume section displaying a link to download the resume and a list of proficiencies
