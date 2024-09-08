@@ -14,7 +14,7 @@ This is a personal portfolio website built using React. The portfolio showcases 
 
 ## Demo
 
-Check out the live demo of the portfolio here: [Live Demo](#)
+Check out the live demo of the portfolio here: [Live Demo](https://markjas0n-react.netlify.app)
 
 ## Features
 
