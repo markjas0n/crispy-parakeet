@@ -1,7 +1,7 @@
 # React Portfolio
 
 This is a personal portfolio website built using React. The portfolio showcases various projects, includes a bio, contact form, and a downloadable résumé. It is fully responsive and features modern design elements.
-
+![react portfolio demo](Develop/assets/images/react-port.gif)
 ## Table of Contents
 
 - [Demo](#demo)
