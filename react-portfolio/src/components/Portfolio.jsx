@@ -4,7 +4,7 @@ import Project from './Project';
 
 // Array of project details to be displayed in the Portfolio section
 const projects = [
-  { title: 'Project 1', image: '/vite.svg', deployedLink: '#', repoLink: '#' },
+  { title: 'Concert Tracker', image: '/assets/images/pro1.gif', deployedLink: '#', repoLink: 'https://github.com/akaufmanfrey/Concert-Tracker' },
   // Add more projects as needed
 ];
 

@@ -7,7 +7,7 @@ const Resume = () => {
     <section className="resume">
       {/* Link to download the resume */}
       <a href="path-to-your-resume.pdf" download>
-        Download My Resume
+      ☞ Resumé 
       </a>
       <h3 className="proficiencies-header">Proficiencies</h3> <hr></hr>
       {/* List of proficiencies */}
@@ -16,7 +16,7 @@ const Resume = () => {
         <li>React</li>
         <li>Node.js</li>
         <li>CSS</li>
-        {/* Add more proficiencies as needed */}
+        {/* Add more proficiencies */}
       </ul>
     </section>
   );

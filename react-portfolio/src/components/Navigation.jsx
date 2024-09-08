@@ -4,7 +4,7 @@ import React from 'react';
 // Navigation component for switching between different sections of the portfolio
 const Navigation = ({ setCurrentSection, currentSection }) => {
   // List of sections to display in the navigation menu
-  const sections = ['About', 'Portfolio', 'Contact', 'Resume'];
+  const sections = ['⌲ About', '⌲ Portfolio', '⌲ Contact', '⌲ Resume'];
 
   return (
     <nav className="navigation">
