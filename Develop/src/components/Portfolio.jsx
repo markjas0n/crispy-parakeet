@@ -9,7 +9,7 @@ const projects = [
   { title: 'Weather', image: 'src/assets/images/weather.gif', deployedLink: 'https://github.com/markjas0n/updated-bongos', repoLink: 'https://markjas0n.github.io/Portfolio/' },
 
 
-  // Add more projects as needed
+  // Add more projects as HERE! 
 ];
 
 // Portfolio section displaying individual projects using the Project component
